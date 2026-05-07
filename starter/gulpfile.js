@@ -4,11 +4,19 @@ import shell from "gulp-shell";
 // Builds the app and serves it with Parcel on the default port.
 const build = shell.task("npx parcel index.html --dist-dir dist");
 
+// Creates an optimized Parcel build that can finish before tests run.
+const buildProduction = shell.task(
+  "npx parcel build index.html --dist-dir dist",
+);
+
 // Runs the Mocha unit tests for the shuffle helper.
 const test = shell.task("npx mocha test/shuffle.js");
 
 // Runs Cypress specs against an already-running Parcel server.
 const e2e = shell.task("npx cypress run");
 
+// Runs the production build and unit tests together for submission checks.
+const verify = gulp.series(buildProduction, test);
+
 export default build;
-export { test, e2e };
+export { test, e2e, verify };

@@ -18,6 +18,19 @@ describe("shuffle()", () => {
     assert.deepEqual([...result].sort(), [...arr].sort());
   });
 
+  it("should not mutate the original array", () => {
+    const arr = [1, 2, 3, 4, 5];
+    shuffle(arr);
+
+    assert.deepEqual(arr, [1, 2, 3, 4, 5]);
+  });
+
+  it("should support an empty array", () => {
+    const result = shuffle([]);
+
+    assert.deepEqual(result, []);
+  });
+
   // Random shuffles can occasionally match the original, so sample several runs.
   it("should rearrange the indexes of the array", () => {
     const arr = [1, 2, 3, 4, 5, 6, 7, 8];
