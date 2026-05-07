@@ -1,0 +1,24 @@
+{
+  "name": "study-night",
+  "version": "1.0.0",
+  "description": "A flashcard study tool",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "mocha test/shuffle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "cypress": "^13.17.0",
+    "eslint": "^10.3.0",
+    "gulp": "^5.0.1",
+    "gulp-cli": "^3.1.0",
+    "gulp-shell": "^0.8.0",
+    "mocha": "^11.7.5",
+    "parcel": "^2.16.4",
+    "prettier": "^3.8.3"
+  }
+}
