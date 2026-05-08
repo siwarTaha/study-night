@@ -22,7 +22,7 @@ label {
   color: #333333;
 }
 
-input[type="text"] {
+.textInput {
 
   width: 100%;
   padding: 10px;
@@ -36,7 +36,7 @@ input[type="text"] {
 
 
 
-input[type="submit"] {
+.submitButton {
   width: 100%;
   padding: 10px;
   background-color: gray;

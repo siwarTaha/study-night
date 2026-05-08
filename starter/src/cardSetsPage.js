@@ -35,6 +35,7 @@ export const renderCardSetsPage = () => {
 
   //Creates a button that will toggle the forms visibility
   const toggleFormButton = createToggleButton("Add New Set", form);
+  toggleFormButton.className = "cardPageButton";
   // Attribute used for selecting the forms during Cypress tests.
   toggleFormButton.setAttribute("data-cy", "toggle_form");
 
@@ -57,7 +58,7 @@ const createSetPreviewCard = (set, setContainer) => {
   const setCard = document.createElement("ul");
   setCard.className = "cardSets";
   // Dynamic attribute used to select a study set during testing.
-  setCard.setAttribute("data-cy", set.id);
+  setCard.setAttribute("data-cy", `set-card-${set.id}`);
 
   // Creates the Study Sets Title element
   const liTitle = document.createElement("li");

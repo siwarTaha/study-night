@@ -4,6 +4,7 @@
   "description": "A flashcard study tool",
   "scripts": {
     "gulp": "gulp",
+    "build": "parcel build index.html",
     "test": "mocha test/shuffle.js"
   },
   "keywords": [],

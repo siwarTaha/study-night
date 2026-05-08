@@ -1,13 +1,13 @@
 //DO NOT CHANGE ANYTHING IN THIS FILE//
 // This file is responsible for loading the home page
-//Imports image for homepage
-import homePageImage from "../images/homePage.png";
 //Helper functions
 import {
   createHeader,
   createElement,
   createImage,
 } from "./utilityRenderFunctions.js";
+
+const homePageImage = "images/homePage.png";
 
 //Renders home page
 const renderHomePage = () => {

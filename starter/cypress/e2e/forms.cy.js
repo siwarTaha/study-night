@@ -17,7 +17,9 @@ describe("Create Set Form", () => {
     cy.get('[data-cy="toggle_form"]').click();
     cy.get('[data-cy="create-set-submit"]').click();
 
-    cy.contains(".error", "TITLE CANNOT BE EMPTY").should("be.visible");
+    cy.get('[data-cy="form-error"]')
+      .should("be.visible")
+      .and("contain", "TITLE CANNOT BE EMPTY");
   });
 });
 
@@ -29,7 +31,7 @@ describe("Add Card Form", () => {
     cy.get('[data-cy="toggle_form"]').click();
     cy.get('[data-cy="create-set-input"]').type("Test Set");
     cy.get('[data-cy="create-set-submit"]').click();
-    cy.contains("Test Set").click();
+    cy.get('[data-cy="set-card-5"]').click();
     cy.get('[data-cy="toggle_form"]').click();
   });
 
@@ -44,8 +46,8 @@ describe("Add Card Form", () => {
   it("unhappy path: shows an error when card front is empty", () => {
     cy.get('[data-cy="add-card-submit"]').click();
 
-    cy.contains(".error", "TERM AND DESCRIPTION CANNOT BE EMPTY").should(
-      "be.visible",
-    );
+    cy.get('[data-cy="form-error"]')
+      .should("be.visible")
+      .and("contain", "TERM AND DESCRIPTION CANNOT BE EMPTY");
   });
 });

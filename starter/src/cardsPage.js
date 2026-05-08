@@ -5,9 +5,9 @@
 // and a button to shuffle the cards.
 
 // This function is responsible for generating the form used to create a new card.
-import { renderCardForm } from "./createCard";
+import { renderCardForm } from "./createCard.js";
 // This function is responsible for shuffling the flashcard
-import { shuffle } from "./shuffle";
+import { shuffle } from "./shuffle.js";
 // Functions responsible for creating toggle button used to toggle the forms visibility
 import { createToggleButton } from "./utilityRenderFunctions.js";
 
@@ -95,11 +95,13 @@ const renderFlashCards = (set, index = 0) => {
 
   // Creates button for toggling the form
   const addCardBtn = createToggleButton("Add New Card", form);
+  addCardBtn.className = "cardPageButton";
   addCardBtn.setAttribute("data-cy", "toggle_form");
 
   // Creates button for shuffling the cards
   const shuffleBtn = document.createElement("button");
   shuffleBtn.textContent = "Shuffle Cards";
+  shuffleBtn.className = "cardPageButton";
 
   // Adds an event listener to the shuffle button.
   // On click, the flashcards will be shuffled.
@@ -115,6 +117,7 @@ const renderFlashCards = (set, index = 0) => {
 const createNavigationButton = (text, onClick) => {
   const btn = document.createElement("button");
   btn.textContent = text;
+  btn.className = "cardNavButton";
   btn.addEventListener("click", onClick);
   return btn;
 };

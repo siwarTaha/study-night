@@ -5,16 +5,16 @@ header {
   cursor: pointer;
 }
 
-header h1,
-nav li {
+.siteTitle,
+.navItem {
   text-transform: uppercase;
 }
 
-nav li {
+.navItem {
   margin: 10% 5%;
   border-bottom: 2px solid lightgray;
 }
 
-nav li:hover {
+.navItem:hover {
   border-bottom-color: #45e9f5;
 }

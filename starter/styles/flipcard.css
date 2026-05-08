@@ -74,11 +74,11 @@
   justify-content: space-around;
 }
 
-.cardPageContainer button {
+.cardPageButton {
   margin: 3%;
 }
 
-.cardPageContainer h2 {
+.cardPageTitle {
   text-align: center;
 }
 
@@ -97,7 +97,7 @@
   margin: 5%;
 }
 
-.nextAndPrevBtnContainer button {
+.cardNavButton {
   width: 45%;
 }
 
@@ -130,7 +130,7 @@
     align-items: center;
   }
 
-  .nextAndPrevBtnContainer button {
+  .cardNavButton {
     width: 80%;
     margin: 5px 0;
   }
@@ -161,7 +161,7 @@
     margin: 5%;
   }
 
-  .nextAndPrevBtnContainer button {
+  .cardNavButton {
     width: 90%;
     margin: 5px 0;
   }

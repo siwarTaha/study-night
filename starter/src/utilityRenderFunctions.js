@@ -15,6 +15,9 @@ const createHeader = (headerType, text, dataCy) => {
   const header = document.createElement(headerType);
   header.textContent = text;
   header.setAttribute("data-cy", dataCy);
+  if (dataCy === "study-set-header") {
+    header.className = "cardPageTitle";
+  }
   return header;
 };
 
@@ -40,6 +43,7 @@ const createInput = (name) => {
   input.type = "text";
   input.name = name;
   input.id = name;
+  input.className = "textInput";
 
   if (name === "titleInput") {
     input.setAttribute("data-cy", "create-set-input");
@@ -56,6 +60,7 @@ const createSubmitButton = (value) => {
   const submit = document.createElement("input");
   submit.type = "submit";
   submit.value = value;
+  submit.className = "submitButton";
 
   if (value === "Submit Set") {
     submit.setAttribute("data-cy", "create-set-submit");

@@ -3,14 +3,14 @@
 //This file is responsible for rendering the About page,
 //including loading any content about the application and organization.
 //This imports helper functions
-//This imports the image
-import aboutPageImage from "../images/aboutImage.png";
 // This function creates a header element
 import {
   createHeader,
   createElement,
   createImage,
 } from "./utilityRenderFunctions.js";
+
+const aboutPageImage = "images/aboutImage.png";
 
 export const renderAboutPage = () => {
   // Clear the main content area
