@@ -5,6 +5,7 @@
   "scripts": {
     "gulp": "gulp",
     "build": "parcel build index.html",
+    "cypress": "cypress run",
     "test": "mocha test/shuffle.js"
   },
   "keywords": [],

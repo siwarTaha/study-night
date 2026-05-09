@@ -19,4 +19,10 @@ describe("Navigation", () => {
     cy.get('[data-cy="nav-home"]').click();
     cy.contains("Study Night").should("be.visible");
   });
+
+  it("unhappy path: does not show the wrong page after a menu item is clicked", () => {
+    cy.get('[data-cy="nav-about"]').click();
+
+    cy.contains("Study Set Library").should("not.exist");
+  });
 });
